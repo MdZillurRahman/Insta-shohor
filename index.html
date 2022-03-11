@@ -81,7 +81,7 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
-        <Section>
+        <Section id="Q&A">
             <h1 class="text-center mt-3 mb-3 text-decoration-underline">Questions & Answers</h1>
             <div class="accordion w-75 mx-auto mb-5" id="accordionExample">
                 <div class="accordion-item">
@@ -92,8 +92,7 @@
                   </h2>
                   <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <p>
-                            <strong>As an interpreted language</strong>,The source code of javascript needs to pass through a program called compiler, which translate the source code into a machine language. So that computer can understands te source code. Just-In-Time (JIT) compilation is a technology used by modern browsers which compiles javascript into an executable code before run it.
+                        <p>The source code of javascript needs to pass through a program called compiler as javascript is an <strong> interpreted language</strong>. Compiler helps to translate the source code into a machine language. So that computer can understands the source code. Just-In-Time (JIT) compilation is a technology used by modern browsers which compiles javascript into an executable code before run it. If we create a document, it can interact with javascript.
                         </p>
                     </div>
                   </div>
@@ -106,7 +105,15 @@
                   </h2>
                   <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                      <p>
+                          Javascript owns a runtime model based on eventloop. Eventloop is responsible for -
+                          <ul>
+                              <li>Executing Code</li>
+                              <li>Collecting and processing events</li>
+                              <li>executing queued sub-tasks</li>
+                          </ul>
+                          The event loop constantly checks whether or not the call stack is empty. Call stack keep the track of all operations in line to be executed. New functions will be added from the event queue, If it is empty, else current function will be processed.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -118,7 +125,27 @@
                   </h2>
                   <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <table class="table">
+                            <thead class="text-center">
+                              <tr>
+                                <th scope="col">Items</th>
+                                <th scope="col">Local Storage</th>
+                                <th scope="col">Session Storage</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Storage Capacity</td>
+                                <td>5-10 MB</td>
+                                <td>5 MB</td>
+                              </tr>
+                              <tr>
+                                <td>Expiration date</td>
+                                <td>Persists the storage across browser sessions</td>
+                                <td>Cleared when the page session ends</td>
+                              </tr>
+                            </tbody>
+                          </table>
                     </div>
                   </div>
                 </div>
