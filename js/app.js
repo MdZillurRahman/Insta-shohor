@@ -22,12 +22,12 @@ const addToLiked = (id) => {
 
 const reportPost = (id) => {
     reportedPostsId.push(id);
-    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+    const remainingPosts = posts.filter((post) => reportedPostsId.includes(post.id));
     showPosts(remainingPosts);
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? `${text}` : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -144,17 +144,21 @@ const showPosts = (posts) => {
 
 const displayLikedPosts = () => {
     const likedPosts = getLikedPosts();
+    const liked = document.getElementById( "liked" );
+    liked.innerHTML = "";
     likedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "liked" ).appendChild(div);
+        liked.appendChild(div);
     });
 };
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    const reported = document.getElementById( "reported" );
+    reported.innerHTML = "";
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
-        document.getElementById( "reported" ).appendChild(div);
+        reported.appendChild(div);
     });
 };
 
